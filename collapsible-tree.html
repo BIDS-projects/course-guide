@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Tree Example</title>
+    <title>Data Science Course Mapping</title>
 
     <style>
 	
@@ -12,19 +12,19 @@
 	}
 
 	.node circle {
-	  fill: #fff;
-	  stroke: steelblue;
-	  stroke-width: 3px;
+	  fill: #ff9999;
+	  stroke: #DC143C;
+	  stroke-width: 7px;
 	}
 
 	.node text {
-	  font: 12px sans-serif;
+	  font: 20px sans-serif;
 	}
 
 	.link {
 	  fill: none;
 	  stroke: #ccc;
-	  stroke-width: 2px;
+	  stroke-width: 3px;
 	}
 	
     </style>
@@ -40,26 +40,86 @@
 
 var treeData = [
   {
-    "name": "Top Level",
+    "name": "DS 8",
     "parent": "null",
     "children": [
       {
-        "name": "Level 2: A",
-        "parent": "Top Level",
+        "name": "Business",
+        "parent": "DS 8",
         "children": [
           {
-            "name": "Son of A",
-            "parent": "Level 2: A"
+            "name": "Economics",
+            "parent": "Business"
           },
           {
-            "name": "Daughter of A",
-            "parent": "Level 2: A"
+            "name": "Operations Research",
+            "parent": "Business"
           }
         ]
       },
       {
-        "name": "Level 2: B",
-        "parent": "Top Level"
+        "name": "Humanities",
+        "parent": "DS 8",
+        "children": [
+          {
+            "name": "Sociology",
+            "parent": "Humanities"
+          },
+          {
+            "name": "Anthropology",
+            "parent": "Humanities"
+          }
+        ]
+      },
+	  {
+        "name": "Sciences",
+        "parent": "DS 8",
+        "children": [
+          {
+            "name": "Biology",
+            "parent": "Sciences"
+          },
+          {
+            "name": "Earth and Planetary Science",
+            "parent": "Sciences"
+          },
+		  {
+            "name": "Physics",
+            "parent": "Sciences"
+          }
+        ]
+      },  
+	  {
+        "name": "Engineering",
+        "parent": "DS 8",
+        "children": [
+          {
+            "name": "Civil Engineering",
+            "parent": "Engineering"
+          },
+          {
+            "name": "Mechanical Engineering",
+            "parent": "Engineering"
+          }
+        ]
+      },
+	  {
+        "name": "Core",
+        "parent": "DS 8",
+        "children": [
+          {
+            "name": "Computer Science",
+            "parent": "Core"
+          },
+          {
+            "name": "Statistics",
+            "parent": "Core"
+          },
+		  {
+            "name": "Math",
+            "parent": "Core"
+          }	  
+        ]
       }
     ]
   }
@@ -68,8 +128,8 @@ var treeData = [
 
 // ************** Generate the tree diagram	 *****************
 var margin = {top: 20, right: 120, bottom: 20, left: 120},
-	width = 960 - margin.right - margin.left,
-	height = 500 - margin.top - margin.bottom;
+	width = 1500 - margin.right - margin.left,
+	height = 800 - margin.top - margin.bottom;
 	
 var i = 0,
 	duration = 750,
@@ -116,10 +176,10 @@ function update(source) {
 
   nodeEnter.append("circle")
 	  .attr("r", 1e-6)
-	  .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+	  .style("fill", function(d) { return d._children ? "#f1baa7" : "#fff"; });
 
   nodeEnter.append("text")
-	  .attr("x", function(d) { return d.children || d._children ? -13 : 13; })
+	  .attr("x", function(d) { return d.children || d._children ? -25 : 25; })
 	  .attr("dy", ".35em")
 	  .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
 	  .text(function(d) { return d.name; })
@@ -131,8 +191,8 @@ function update(source) {
 	  .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
 
   nodeUpdate.select("circle")
-	  .attr("r", 10)
-	  .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+	  .attr("r", 15)
+	  .style("fill", function(d) { return d._children ? "#f1baa7" : "#fff"; });
 
   nodeUpdate.select("text")
 	  .style("fill-opacity", 1);
