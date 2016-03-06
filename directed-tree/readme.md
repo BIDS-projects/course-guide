@@ -17,3 +17,5 @@ To-dos:
 * Allows highlight by category/color.
 * Overall optimization and enhancement. 
 	
+Aesthetic To-dos:
+* Optimize for readability, thicker arrows.
