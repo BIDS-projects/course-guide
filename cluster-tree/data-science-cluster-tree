@@ -14,7 +14,7 @@
 	.node circle {
 	  fill: #ff9999;
 	  stroke: #DC143C;
-	  stroke-width: 7px;
+	  stroke-width: 5px;
 	}
 
 	.node text {
@@ -171,7 +171,7 @@ var treeData = [
 // ************** Generate the tree diagram	 *****************
 var margin = {top: 20, right: 120, bottom: 20, left: 200},
 	width = 1500 - margin.right - margin.left,
-	height = 800 - margin.top - margin.bottom;
+	height = 850 - margin.top - margin.bottom;
 	
 var i = 0,
 	duration = 750,
@@ -233,7 +233,7 @@ function update(source) {
 	  .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
 
   nodeUpdate.select("circle")
-	  .attr("r", 15)
+	  .attr("r", 10.5)
 	  .style("fill", function(d) { return d._children ? "#f1baa7" : "#fff"; });
 
   nodeUpdate.select("text")
