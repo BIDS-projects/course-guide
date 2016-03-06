@@ -16,6 +16,7 @@ To-dos:
 * Upon click, redirect to related course page.
 * Allows highlight by category/color.
 * Overall optimization and enhancement. 
+* Proximity grouping by color/category.
 	
 Aesthetic To-dos:
 * Optimize for readability, thicker arrows.
