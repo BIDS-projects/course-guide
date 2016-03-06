@@ -9,7 +9,7 @@ Version A:
 ![Version A](https://github.com/BIDS-projects/course-guide/blob/master/directed-tree/previews/versionA.JPG?raw=true)
 
 Version B:
-![Version B](https://github.com/BIDS-projects/course-guide/blob/master/directed-tree/previews/versionA.JPG?raw=true)
+![Version B](https://github.com/BIDS-projects/course-guide/blob/master/directed-tree/previews/versionB.JPG?raw=true)
 
 To-dos:
 * When hovering, highlights related courses.
