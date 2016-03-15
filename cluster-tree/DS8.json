@@ -1,0 +1,44 @@
+[
+{
+  "name": "DS8",
+  "children": [
+    {
+      "name": "Business",
+      "children": [
+        {"name": "Economics",},
+        {"name": "Operations Research",}
+      ]
+    },
+    {
+      "name": "Humanities",
+      "children": [
+        {"name": "Sociology",},
+        {"name": "Anthropology",}
+      ]
+    },
+    {
+      "name": "Sciences",
+      "children": [
+        {"name": "Biology",},
+        {"name": "Earth and Planetary Science",},
+	      {"name": "Physics",}
+      ]
+    },  
+    {
+      "name": "Engineering",
+      "children": [
+        {"name": "Civil Engineering",},
+        {"name": "Mechanical Engineering",}
+      ]
+    },
+    {
+      "name": "Core",
+      "children": [
+        {"name": "Computer Science",},
+        {"name": "Statistics",},
+	      {"name": "Math",}	  
+      ]
+    }
+  ]
+}
+]
