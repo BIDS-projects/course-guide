@@ -3,11 +3,11 @@ from bs4 import BeautifulSoup
 import csv
 
 sites = ['http://dlab.berkeley.edu/course-list', \
-	'http://dlab.berkeley.edu/course-list/course-list?field_department_tid=All&amp;title=&amp;field_semester_value=Spring%202014&amp;field_description_value=&amp;page=1', \
-	'http://dlab.berkeley.edu/course-list/course-list?field_department_tid=All&amp;title=&amp;field_semester_value=Spring%202014&amp;field_description_value=&amp;page=2', \
-	'http://dlab.berkeley.edu/course-list/course-list?field_department_tid=All&amp;title=&amp;field_semester_value=Spring%202014&amp;field_description_value=&amp;page=3', \
-	'http://dlab.berkeley.edu/course-list/course-list?field_department_tid=All&amp;title=&amp;field_semester_value=Spring%202014&amp;field_description_value=&amp;page=4', \
-	'http://dlab.berkeley.edu/course-list/course-list?field_department_tid=All&amp;title=&amp;field_semester_value=Spring%202014&amp;field_description_value=&amp;page=5']
+	'http://dlab.berkeley.edu/course-list?field_department_tid=All&title=&field_semester_value=Spring%202014&field_description_value=&page=1', \
+	'http://dlab.berkeley.edu/course-list?field_department_tid=All&title=&field_semester_value=Spring%202014&field_description_value=&page=2', \
+	'http://dlab.berkeley.edu/course-list?field_department_tid=All&title=&field_semester_value=Spring%202014&field_description_value=&page=3', \
+	'http://dlab.berkeley.edu/course-list?field_department_tid=All&title=&field_semester_value=Spring%202014&field_description_value=&page=4', \
+	'http://dlab.berkeley.edu/course-list?field_department_tid=All&title=&field_semester_value=Spring%202014&field_description_value=&page=5']
 
 all_course_codes = []
 all_course_titles = []
