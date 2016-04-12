@@ -1,33 +1,25 @@
-{
-  "nodes":[
-    {"name":"Economics/Business","group":1},
-    {"name":"ECON 141","group":1},
-    {"name":"ECON C103","group":1},
-    {"name":"ECON 140","group":1},
-    {"name":"ECON C142","group":1},
-    {"name":"ECON 174","group":1},
-    {"name":"ECON C175","group":1},
-    {"name":"IEOR 166","group":2},
-    {"name":"UGBA 104","group":3},
-    {"name":"UGBA 143","group":3},
-    {"name":"UGBA 161","group":3},
-    {"name":"UGBA 122","group":3},
-    {"name":"UGBA 101A","group":3},
-    {"name":"UGBA 101B","group":3}
-  ],
-  "links":[
-    {"source":1,"target":0,"value":5},
-    {"source":2,"target":0,"value":1},
-    {"source":3,"target":0,"value":1},
-    {"source":4,"target":0,"value":1},
-    {"source":5,"target":0,"value":1},
-    {"source":6,"target":0,"value":1},
-    {"source":7,"target":0,"value":1},
-    {"source":8,"target":0,"value":1},
-    {"source":9,"target":0,"value":1},
-    {"source":10,"target":0,"value":1},
-    {"source":11,"target":0,"value":1},
-    {"source":12,"target":0,"value":1},
-    {"source":13,"target":0,"value":1}
-  ]
-}
+<!DOCTYPE html>
+
+<body>
+  <script src="http://d3js.org/d3.v2.min.js?2.9.6"></script>
+  <script>
+    var classes = [{
+      "group": "n",
+      "word": "main node",
+      "children": [{"name":"ECON 141","group":1},
+                    {"name":"ECON C103","group":1},
+                    {"name":"ECON 140","group":1},
+                    {"name":"ECON C142","group":1},
+                    {"name":"ECON 174","group":1},
+                    {"name":"ECON C175","group":1},
+                    {"name":"IEOR 166","group":2},
+                    {"name":"UGBA 104","group":3},
+                    {"name":"UGBA 143","group":3},
+                    {"name":"UGBA 161","group":3},
+                    {"name":"UGBA 122","group":3},
+                    {"name":"UGBA 101A","group":3},
+                    {"name":"UGBA 101B","group":3} ]
+    }]
+
+  </script>
+</body>
