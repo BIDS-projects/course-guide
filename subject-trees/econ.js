@@ -22,7 +22,7 @@ var svg = d3.select("body").append("svg")
 root = classes[0]; //set root node
 root.fixed = true;
 root.x = w / 2;
-root.y = h / 2 - 80;
+root.y = h / 2 - 75;
 update();
 
 function update() {
