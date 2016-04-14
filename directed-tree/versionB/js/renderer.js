@@ -214,8 +214,9 @@
                         dragged.node.tempMass = 50
                         dragged = null
                         selected = null
-                        $(canvas).unbind('mousemove', handler.dragged)
-                        $(window).unbind('mouseup', handler.dropped)
+                        $(canvas).unbind('mousemove', handler.dragged);
+                        $(window).unbind('mouseup', handler.dropped);
+                        $(canvas).bind('mousemove', handler.moved);
                         _mouseP = null
                         return false
                     }
