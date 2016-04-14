@@ -1,6 +1,6 @@
 var sys = arbor.ParticleSystem(1000, 100, 0.7);
 var sys = arbor.ParticleSystem();
-sys.parameters({repulsion:550, stiffness:900, gravity:true, dt:0.015});
+sys.parameters({repulsion:1000, stiffness:900, gravity:true, dt:0.015});
 sys.renderer = Renderer("#viewport");
 
 // Course Nodes
@@ -107,7 +107,6 @@ sys.addEdge(node_ds8, node_cs61a, { weight: 3 });
 sys.addEdge(node_ds8, node_cs61b, { weight: 3 });
 sys.addEdge(node_cs61a, node_cs61b, { directed: true, weight: 3 });
 // Math Courses
-sys.addEdge(node_math53, node_math54, { weight: 3, color: 'transparent' });
 // Stats direction
 sys.addEdge(node_ds8, node_stat20, { weight: 3 });
 sys.addEdge(node_ds8, node_stat134, { weight: 3 });
@@ -118,9 +117,9 @@ sys.addEdge(node_math53, node_stat154, { directed: true, weight: 3 });
 sys.addEdge(node_math54, node_stat154, { directed: true, weight: 3 });
 sys.addEdge(node_stat135, node_stat154, { directed: true, weight: 3 });
 
+
 // CS direction
-sys.addEdge(node_cs61a, node_cs70, { weight: 3, color: 'transparent' });
-sys.addEdge(node_cs61a, node_cs61c, { weight: 3, color: 'transparent' });
+
 sys.addEdge(node_cs61b, node_cs61c, { directed: true, weight: 3 });
 sys.addEdge(node_cs61b, node_cs186, { directed: true, weight: 3 });
 sys.addEdge(node_cs61c, node_cs186, { directed: true, weight: 3 });
@@ -128,6 +127,16 @@ sys.addEdge(node_cs61b, node_cs188, { directed: true, weight: 3 });
 sys.addEdge(node_math53, node_cs189, { directed: true, weight: 3 });
 sys.addEdge(node_math54, node_cs189, { directed: true, weight: 3 });
 sys.addEdge(node_cs70, node_cs189, { directed: true, weight: 3 });
+sys.addEdge(node_cs188, node_cs189, { directed: true, weight: 3 });
+
+// Proximity tweak
+sys.addEdge(node_math53, node_math54, { weight: 3, color: 'transparent' });
+sys.addEdge(node_stat133, node_stat134, { weight: 3, color: 'transparent' });
+sys.addEdge(node_stat20, node_stat134, { weight: 3, color: 'transparent' });
+sys.addEdge(node_stat20, node_stat154, { weight: 3, color: 'transparent' });
+sys.addEdge(node_stat133, node_stat154, { weight: 3, color: 'transparent' });
+sys.addEdge(node_cs61a, node_cs70, { weight: 3, color: 'transparent' });
+sys.addEdge(node_cs61b, node_cs70, { weight: 3, color: 'transparent' });
+sys.addEdge(node_cs61a, node_cs61c, { weight: 3, color: 'transparent' });
 sys.addEdge(node_cs186, node_cs188, { weight: 3, color: 'transparent' });
 sys.addEdge(node_cs186, node_cs189, { weight: 3, color: 'transparent' });
-sys.addEdge(node_cs188, node_cs189, { directed: true, weight: 3 });
