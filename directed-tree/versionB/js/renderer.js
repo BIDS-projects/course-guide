@@ -168,9 +168,7 @@
                         var pos = $(canvas).offset();
                         _mouseP = arbor.Point(e.pageX - pos.left, e.pageY - pos.top);
                         nearest = dragged = particleSystem.nearest(_mouseP);
-                        
-                        //$(selected).trigger({type:"navigate", path:url});
-                        
+
                         if (dragged.node !== null) dragged.node.fixed = true;
                         
                         if (nearest && selected && nearest.node===selected.node){
@@ -196,19 +194,17 @@
 
                         if (!nearest) return
                         if (dragged !== null && dragged.node !== null) {
-                            var p = particleSystem.fromScreen(s)
-                            dragged.node.p = p
+                            if (nearest.distance < 60) {
+                                var p = particleSystem.fromScreen(s);
+                                dragged.node.p = p;       
+                            }
+
                         }
 
                         return false
                     },
 
                     dropped: function(e) {
-                        // Try onClick to link
-//                        if (selected.node.data.link) {
-//                            window.location.href = selected.node.data.link;
-//                        }
-                        
                         if (dragged === null || dragged.node === undefined) return
                         if (dragged.node !== null) dragged.node.fixed = false
                         dragged.node.tempMass = 50
