@@ -1,10 +1,11 @@
 (function() {
 
     Renderer = function(canvas) {
-        var canvas = $(canvas).get(0)
+        var dom = $(canvas);
+        var canvas = $(canvas).get(0);
         var ctx = canvas.getContext("2d");
-        var gfx = arbor.Graphics(canvas)
-        var particleSystem = null
+        var gfx = arbor.Graphics(canvas);
+        var particleSystem = null;
 
         var that = {
             init: function(system) {
@@ -29,7 +30,9 @@
                     // determine the box size and round off the coords if we'll be 
                     // drawing a text label (awful alignment jitter otherwise...)
                     var label = node.data.label || ""
-                    var w = ctx.measureText("" + label).width + 10
+                    var w = 64
+                    // if want to measure text width
+                    // var w = ctx.measureText("" + label).width + 20
                     if (!("" + label).match(/^[ \t]*$/)) {
                         pt.x = Math.floor(pt.x)
                         pt.y = Math.floor(pt.y)
@@ -56,7 +59,7 @@
 
                     // draw the text
                     if (label) {
-                        ctx.font = "12px Helvetica"
+                        ctx.font = "14px Helvetica"
                         ctx.textAlign = "center"
                         ctx.fillStyle = "white"
                         if (node.data.color == 'none') ctx.fillStyle = '#333333'
@@ -131,15 +134,58 @@
                 // set up a handler object that will initially listen for mousedowns then
                 // for moves and mouseups while dragging
                 var handler = {
+                    moved:function(e){
+                        var pos = $(canvas).offset();
+                        _mouseP = arbor.Point(e.pageX-pos.left, e.pageY-pos.top)
+                        nearest = particleSystem.nearest(_mouseP);
+
+                        if (!nearest.node) return false
+
+                        if (true) {
+                            selected = (nearest.distance < 40) ? nearest : null
+                            if (selected){
+                                dom.addClass('linkable')
+                                window.status = selected.node.data.link
+                            } else {
+                                dom.removeClass('linkable')
+                                window.status = ''
+                            }
+                        } else if (false) {
+                            // placeholder for future animation stuff
+                            // $.inArray(nearest.node.name, ['cs61a','cs61b','stat20','math54']) >=0 
+                            if (nearest.node.name!=_section){
+                                _section = nearest.node.name
+                                that.switchSection(_section)
+                            }
+                            dom.removeClass('linkable')
+                            window.status = ''
+                        }
+
+
+                        return false
+                    },                    
                     clicked: function(e) {
                         var pos = $(canvas).offset();
-                        _mouseP = arbor.Point(e.pageX - pos.left, e.pageY - pos.top)
-                        selected = nearest = dragged = particleSystem.nearest(_mouseP);
-
-                        if (dragged.node !== null) dragged.node.fixed = true
-
-                        $(canvas).bind('mousemove', handler.dragged)
-                        $(window).bind('mouseup', handler.dropped)
+                        _mouseP = arbor.Point(e.pageX - pos.left, e.pageY - pos.top);
+                        nearest = dragged = particleSystem.nearest(_mouseP);
+                        
+                        //$(selected).trigger({type:"navigate", path:url});
+                        
+                        if (dragged.node !== null) dragged.node.fixed = true;
+                        
+                        if (nearest && selected && nearest.node===selected.node){
+                            var link = selected.node.data.link
+                            if (link){
+                                console.log('haha');
+                                window.location = link;
+                                //$(that).trigger({type:"navigate", path:link})
+                            }
+                            return false
+                        }                        
+                        
+                        $(canvas).unbind('mousemove', handler.moved);
+                        $(canvas).bind('mousemove', handler.dragged);
+                        $(window).bind('mouseup', handler.dropped);
 
                         return false
                     },
@@ -158,6 +204,11 @@
                     },
 
                     dropped: function(e) {
+                        // Try onClick to link
+//                        if (selected.node.data.link) {
+//                            window.location.href = selected.node.data.link;
+//                        }
+                        
                         if (dragged === null || dragged.node === undefined) return
                         if (dragged.node !== null) dragged.node.fixed = false
                         dragged.node.tempMass = 50
@@ -170,7 +221,7 @@
                     }
                 }
                 $(canvas).mousedown(handler.clicked);
-
+                $(canvas).mousemove(handler.moved);
             }
 
         }
