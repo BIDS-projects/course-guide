@@ -4,10 +4,53 @@
   <script src="http://d3js.org/d3.v2.min.js?2.9.6"></script>
   <script>
     var classes = [{
-      "group": "n", "name": "Computer Science",
+      "group": 1,
+      "name": "Computer Science",
       "word": "main node",
-      "children": [{"group": 1, "name": "COMPSCI 9C"}, {"group": 1, "name": "COMPSCI 88"}, {"group": 1, "name": "COMPSCI 61B"}, {"group": 1, "name": "COMPSCI 70"}, {"group": 1, "name": "COMPSCI 188"}, {"group": 1, "name": "COMPSCI 194-16"}, {"group": 1, "name": "COMPSCI 186"}, {"group": 1, "name": "COMPSCI 189"}, {"group": 1, "name": "COMPSCI 9A"}, {"group": 1, "name": "COMPSCI 61A"}, {"group": 2, "name": "COMSCI 61C"}, {"group": 3, "name": "ENGIN 177"}, {"group": 4, "name": "INFO 155"}, {"group": 5, "name": "MATH 98"}]
-
+      "children": [{
+        "group": 0,
+        "name": "Applied",
+        "children": [{
+          "group": 2,
+          "name": "COMPSCI 88"
+        }]
+      }, {
+        "group": 0,
+        "name": "Foundational",
+        "children": [{
+          "group": 2,
+          "name": "COMPSCI 70"
+        }, {
+          "group": 2,
+          "name": "COMPSCI 188"
+        }, {
+          "group": 2,
+          "name": "COMPSCI 194-16"
+        }, {
+          "group": 2,
+          "name": "COMPSCI 186"
+        }, {
+          "group": 2,
+          "name": "COMPSCI 189"
+        }]
+      }, {
+        "group": 0,
+        "name": "Applied-Foundational",
+        "children": [{
+          "group": 2,
+          "name": "COMPSCI 61B"
+        }, {
+          "group": 2,
+          "name": "COMPSCI 61A"
+        }]
+      }, {
+        "group": 0,
+        "name": "Multidisciplinary",
+        "children": [{
+          "group": 2,
+          "name": "COMPSCI C8"
+        }]
+      }]
     }]
 
   </script>
