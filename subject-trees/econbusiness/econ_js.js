@@ -1,6 +1,6 @@
 var w = 600,
-  h = 600,
-  radius = 25,
+  h = 800,
+  radius = 20,
   node,
   link,
   root;
@@ -8,10 +8,10 @@ var w = 600,
 var force = d3.layout.force()
   .on("tick", tick)
   .charge(function(d) {
-    return -500;
+    return -900;
   })
   .linkDistance(function(d) {
-    return d.target._children ? 150 : 200;
+    return d.target._children ? 50 : 110;
   })
   .size([w, h - 180]);
 
@@ -94,8 +94,10 @@ function update() {
   title.enter()
     .append("text")
     .attr("class", "title")
-    .attr("dx", -32)
-    .attr("dy", 43)
+    .attr("dx", function(d) {
+      return -d.name.length * 2.8;
+    })
+    .attr("dy", 40)
     .text(function(d) {
       return d.name;
     });
@@ -135,21 +137,36 @@ function color(d) {
   if (d._children) {
     return "#95a5a6";
   } else {
-    switch (d.group) {
-      case 1: //teal
-        return "#29B0A5";
+    switch (d.group % 9) {
+      case 0: //dark blue
+        return "#081F3F";
         break;
-      case 2: //gray
-        return "#53626D";
+      case 1: //yellow
+        return "#FDB71B";
         break;
-      case 3: //green
-        return "#CFD95C";
+      case 2: //teal
+        return "#00B2A5";
         break;
-      case 4: //orange
-        return "#E84E3E";
+      case 3: //pale green
+        return "#9CBDAA";
         break;
-      default: //pink
-        return "#E82B64";
+      case 4: //pink
+        return "#EE1F60";
+        break;
+      case 5: //bright blue
+        return "#00B0DA";
+        break;
+      case 6: //bright green
+        return "#CFDD45";
+        break;
+      case 7: //gray blue
+        return "#51758D";
+        break;
+      case 8: //green
+        return "#9DAD33";
+        break;
+      default:
+        return "#53626F";
     }
   }
 }

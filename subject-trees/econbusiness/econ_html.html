@@ -4,21 +4,46 @@
   <script src="http://d3js.org/d3.v2.min.js?2.9.6"></script>
   <script>
     var classes = [{
-      "group": "n", "name": "Economics/Business",
+      "group": 1,
+      "name": "Economics/Business",
       "word": "main node",
-      "children": [{"name":"ECON 141","group":1},
-                    {"name":"ECON C103","group":1},
-                    {"name":"ECON 140","group":1},
-                    {"name":"ECON C142","group":1},
-                    {"name":"ECON 174","group":1},
-                    {"name":"ECON C175","group":1},
-                    {"name":"IEOR 166","group":2},
-                    {"name":"UGBA 104","group":3},
-                    {"name":"UGBA 143","group":3},
-                    {"name":"UGBA 161","group":3},
-                    {"name":"UGBA 122","group":3},
-                    {"name":"UGBA 101A","group":3},
-                    {"name":"UGBA 101B","group":3} ]
+      "children": [{
+        "group": 0,
+        "name": "Applied",
+        "children": [{
+          "group": 2,
+          "name": "ECON C142"
+        }, {
+          "group": 2,
+          "name": "ECON 141"
+        }, {
+          "group": 2,
+          "name": "ECON 140"
+        }, {
+          "group": 3,
+          "name": "UGBA 122"
+        }, {
+          "group": 3,
+          "name": "UGBA 161"
+        }]
+      }, {
+        "group": 0,
+        "name": "Applied-Foundational",
+        "children": [{
+          "group": 4,
+          "name": "COMPSCI 61B"
+        }, {
+          "group": 4,
+          "name": "COMPSCI 61A"
+        }]
+      }, {
+        "group": 0,
+        "name": "Multidisciplinary",
+        "children": [{
+          "group": 4,
+          "name": "COMPSCI C8"
+        }]
+      }]
     }]
 
   </script>
