@@ -81,7 +81,7 @@ function update() {
 
   node.append("title")
     .text(function(d) {
-      return d.name;
+      return d.class;
     });
 
   // Exit any old nodes.
@@ -137,7 +137,7 @@ function color(d) {
   if (d._children) {
     return "#95a5a6";
   } else {
-    switch (d.group % 9) {
+    switch (d.group % 10) {
       case 0: //dark blue
         return "#081F3F";
         break;
@@ -165,8 +165,8 @@ function color(d) {
       case 8: //green
         return "#9DAD33";
         break;
-      default:
-        return "#53626F";
+      case 9: //light purple
+        return "#D4B2D7";
     }
   }
 }
