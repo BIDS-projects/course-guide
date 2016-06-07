@@ -4,10 +4,59 @@
   <script src="http://d3js.org/d3.v2.min.js?2.9.6"></script>
   <script>
     var classes = [{
-      "group": "n", "name": "Physical Science",
+      "group": 1,
+      "name": "Physical Science",
       "word": "main node",
-      "children": [{"group": 1, "name": "EPS 109"}, {"group": 1, "name": "EPS 104"}, {"group": 2, "name": "PHYSICS 77"}]
-
+      "children": [{
+        "group": 0,
+        "name": "Applied",
+        "children": [{
+          "group": 2,
+          "name": "EPS 109",
+          "class": "Computer Simulations in Earth and Planetary Sciences"
+        }, {
+          "group": 2,
+          "name": "EPS 104",
+          "class": "Mathematical Methods in Geophysics"
+        }, {
+          "group": 3,
+          "name": "PHYSICS 77",
+          "class": "Introduction to Computational Techniques in Physics"
+        },
+        {
+          "group": 7,
+          "name": "ESPM 88",
+          "class": "Exploring Geospatial Data"
+        }]
+      }, {
+        "group": 0,
+        "name": "Applied-Foundational",
+        "children": [{
+          "group": 4,
+          "name": "COMPSCI 61B",
+          "class": "Data Structures"
+        }, {
+          "group": 4,
+          "name": "COMPSCI 61A",
+          "class": "Structure and Interpretation of Computer Programs"
+        }, {
+          "group": 5,
+          "name": "MATH 54",
+          "class": "Linear Algebra and Differential Equations"
+        },  {
+          "group": 6,
+          "name": "STAT 20",
+          "class": "Introduction to Probability and Statistics"
+        }]
+      }, {
+        "group": 0,
+        "name": "Multidisciplinary",
+        "children": [{
+          "group": 4,
+          "name": "COMPSCI C8",
+          "class": "Introduction to Data Science"
+        }]
+      }]
     }]
 
   </script>

@@ -4,10 +4,75 @@
   <script src="http://d3js.org/d3.v2.min.js?2.9.6"></script>
   <script>
     var classes = [{
-      "group": "n", "name": "Mathematics/Statistics",
+      "group": 1,
+      "name": "Mathematics/Statistics",
       "word": "main node",
-      "children": [{"group": 1, "name": "MATH 191"}, {"group": 1, "name": "MATH 54"}, {"group": 1, "name": "MATH 170"}, {"group": 1, "name": "MATH 128A"}, {"group": 2, "name": "PB HLTH 145"}, {"group": 3, "name": "STAT 133"}, {"group": 3, "name": "STAT 134"}, {"group": 3, "name": "STAT 135"}, {"group": 3, "name": "STAT 89A"}, {"group": 3, "name": "STAT 131A"}, {"group": 3, "name": "STAT 151A"}, {"group": 3, "name": "STAT 154"}, {"group": 3, "name": "STAT 88"}, {"group": 3, "name": "STAT 159"}, {"group": 3, "name": "STAT 152"}, {"group": 3, "name": "STAT 158"}, {"group": 3, "name": "STAT 153"}]
+      "children": [{
+        "group": 0,
+        "name": "Foundational",
+        "children": [{
+          "group": 3,
+          "name": "STAT 133",
+          "class": "Concepts of Computing with Data"
+        }, {
+          "group": 3,
+          "name": "STAT 134",
+          "class": "Concepts of Probability"
+        }, {
+          "group": 3,
+          "name": "STAT 135",
+          "class": "Concepts of Statistics"
+        }, {
+          "group": 3,
+          "name": "STAT 89A",
+          "class": "Introduction to Matrices and Graphs in Data Science"
+        }, {
+          "group": 3,
+          "name": "STAT 88",
+          "class": "Probability and Mathematical Statistics in Data Science"
+        }, {
+          "group": 3,
+          "name": "STAT 153",
+          "class": "Time Series"
+        }]
+      }, {
+        "group": 0,
+        "name": "Applied-Foundational",
+        "children": [{
+          "group": 4,
+          "name": "COMPSCI 61B",
+          "class": "Data Structures"
+        }, {
+          "group": 4,
+          "name": "COMPSCI 61A",
+          "class": "Structure and Interpretation of Computer Programs"
 
+        }, {
+          "group": 2,
+          "name": "MATH 54",
+          "class": "Linear Algebra and Differential Equations"
+        }, {
+          "group": 2,
+          "name": "MATH 128A",
+          "class": "Numerical Analysis"
+        }, {
+          "group": 3,
+          "name": "STAT 154",
+          "class": "Modern Statistical Prediction and Machine Learning"
+        }]
+      }, {
+        "group": 0,
+        "name": "Multidisciplinary",
+        "children": [{
+          "group": 3,
+          "name": "STAT 159",
+          "class": "Reproducible and Collaborative Data Science"
+        }, {
+          "group": 4,
+          "name": "COMPSCI C8",
+          "class": "Introduction to Data Science"
+        }]
+      }]
     }]
 
   </script>
