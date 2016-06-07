@@ -11,7 +11,7 @@ var force = d3.layout.force()
     return -900;
   })
   .linkDistance(function(d) {
-    return d.target._children ? 50 : 110;
+    return d.target._children ? 50 : 115;
   })
   .size([w, h - 180]);
 
@@ -81,7 +81,7 @@ function update() {
 
   node.append("title")
     .text(function(d) {
-      return d.name;
+      return d.class;
     });
 
   // Exit any old nodes.
