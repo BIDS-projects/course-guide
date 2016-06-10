@@ -10,8 +10,8 @@
         var that = {
             init: function(system) {
                 particleSystem = system
-                particleSystem.screenSize(canvas.width, canvas.height)
-                particleSystem.screenPadding(40)
+                particleSystem.screenSize(canvas.width - 250, canvas.height - 100)
+                particleSystem.screenPadding(100)
 
                 that.initMouseHandling()
             },
