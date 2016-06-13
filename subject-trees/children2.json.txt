@@ -1,0 +1,26 @@
+Biological Science cluster:
+[{"group": 8, "name": "Applied", "children": [{"group": 1, "name": "BIO ENG 143"}, {"group": 3, "name": "ESPM C177"}, {"group": 5, "name": "MCELLBI 137"}, {"group": 6, "name": "NUSCTX 121"}, {"group": 7, "name": "PB HLTH 141"}, {"group": 7, "name": "PB HLTH 142"}, {"group": 4, "name": "L & S 88-1"}]}, {"group": 8, "name": "Applied and Foundational", "children": [{"group": 2, "name": "COMPSCI 61B"}, {"group": 2, "name": "COMPSCI 61A"}]}, {"group": 8, "name": "Applied, Foundational, and Meta", "children": [{"group": 2, "name": "COMPSCI C8"}]}]
+
+Computer Science cluster:
+[{"group": 2, "name": "Applied", "children": [{"group": 1, "name": "COMPSCI 88"}]}, {"group": 2, "name": "Foundational", "children": [{"group": 1, "name": "COMPSCI 70"}, {"group": 1, "name": "COMPSCI 188"}, {"group": 1, "name": "COMPSCI 194-16"}, {"group": 1, "name": "COMPSCI 186"}, {"group": 1, "name": "COMPSCI 189"}]}, {"group": 2, "name": "Applied and Foundational", "children": [{"group": 1, "name": "COMPSCI 61B"}, {"group": 1, "name": "COMPSCI 61A"}]}, {"group": 2, "name": "Applied, Foundational, and Meta", "children": [{"group": 1, "name": "COMPSCI C8"}]}]
+
+Economics/Business cluster:
+[{"group": 4, "name": "Applied", "children": [{"group": 2, "name": "ECON C142"}, {"group": 2, "name": "ECON 141"}, {"group": 2, "name": "ECON 140"}, {"group": 3, "name": "UGBA 122"}, {"group": 3, "name": "UGBA 161"}]}, {"group": 4, "name": "Applied and Foundational", "children": [{"group": 1, "name": "COMPSCI 61B"}, {"group": 1, "name": "COMPSCI 61A"}]}, {"group": 4, "name": "Applied, Foundational, and Meta", "children": [{"group": 1, "name": "COMPSCI C8"}]}]
+
+Engineering cluster:
+[{"group": 7, "name": "Applied", "children": [{"group": 1, "name": "CIV ENG 88"}, {"group": 1, "name": "CIV ENG 93"}, {"group": 3, "name": "EL ENG 129"}, {"group": 3, "name": "EL ENG 127"}, {"group": 5, "name": "IND ENG 172"}, {"group": 6, "name": "NUC ENG 175"}]}, {"group": 7, "name": "Applied and Foundational", "children": [{"group": 2, "name": "COMPSCI 61B"}, {"group": 2, "name": "COMPSCI 61A"}, {"group": 4, "name": "ENGIN 170"}, {"group": 5, "name": "IND ENG 115"}]}, {"group": 7, "name": "Applied, Foundational, and Meta", "children": [{"group": 2, "name": "COMPSCI C8"}]}]
+
+Humanities cluster:
+[{"group": 8, "name": "Applied", "children": [{"group": 1, "name": "AFRICAM 101"}, {"group": 4, "name": "HIST 88"}, {"group": 6, "name": "MASSCOM 130"}, {"group": 7, "name": "M E STU 102"}, {"group": 5, "name": "L & S 88-2"}]}, {"group": 8, "name": "Meta", "children": [{"group": 2, "name": "ASAMST 165"}]}, {"group": 8, "name": "Applied and Foundational", "children": [{"group": 3, "name": "COMPSCI 61B"}, {"group": 3, "name": "COMPSCI 61A"}]}, {"group": 8, "name": "Applied, Foundational, and Meta", "children": [{"group": 3, "name": "COMPSCI C8"}]}]
+
+Mathematics/Statistics cluster:
+[{"group": 4, "name": "Foundational", "children": [{"group": 3, "name": "STAT 133"}, {"group": 3, "name": "STAT 134"}, {"group": 3, "name": "STAT 135"}, {"group": 3, "name": "STAT 89A"}, {"group": 3, "name": "STAT 88"}, {"group": 3, "name": "STAT 153"}]}, {"group": 4, "name": "Applied and Foundational", "children": [{"group": 1, "name": "COMPSCI 61B"}, {"group": 1, "name": "COMPSCI 61A"}, {"group": 2, "name": "MATH 54"}, {"group": 2, "name": "MATH 128A"}, {"group": 3, "name": "STAT 154"}]}, {"group": 4, "name": "Applied, Foundational, and Meta", "children": [{"group": 3, "name": "STAT 159"}, {"group": 1, "name": "COMPSCI C8"}]}]
+
+Physical Science cluster:
+[{"group": 4, "name": "Applied", "children": [{"group": 2, "name": "EPS 109"}, {"group": 2, "name": "EPS 104"}, {"group": 3, "name": "PHYSICS 77"}]}, {"group": 4, "name": "Applied, Foundational, and Meta", "children": [{"group": 1, "name": "COMPSCI C8"}]}]
+
+Social Science cluster:
+[{"group": 9, "name": "Applied", "children": [{"group": 2, "name": "COG SCI 88"}, {"group": 4, "name": "DEMOG 5"}, {"group": 4, "name": "DEMOG 110"}, {"group": 6, "name": "LINGUIS 158"}, {"group": 7, "name": "PSYCH 101"}, {"group": 8, "name": "SOCIOL 7"}]}, {"group": 9, "name": "Meta", "children": [{"group": 5, "name": "INFO 88"}]}, {"group": 9, "name": "Applied and Meta", "children": [{"group": 1, "name": "AMERSTD C134"}, {"group": 4, "name": "DEMOG C126"}]}, {"group": 9, "name": "Applied, Foundational, and Meta", "children": [{"group": 3, "name": "COMPSCI C8"}]}]
+
+Social Sciences cluster:
+[{"group": 2, "name": "Applied and Foundational", "children": [{"group": 1, "name": "COMPSCI 61B"}, {"group": 1, "name": "COMPSCI 61A"}]}]
